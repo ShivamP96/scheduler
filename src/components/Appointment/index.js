@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import "./styles.scss"
+import Empty from "components/Appointment/Empty"
+import Show from "components/Appointment/Show"
+import Header from "components/Appointment/Header"
 
 export default function Appointment(props) {
+  console.log(props)
 
   return (
-    <article className="appointment"></article>
+
+    <article className="appointment">
+      <Header time={props.time} />
+      
+
+  {props.interview ? <Show student={props.interview.student} 
+  interviewer={props.interview.interviewer.name} /> : <Empty />}
+
+    </article>
   )
 }
 
