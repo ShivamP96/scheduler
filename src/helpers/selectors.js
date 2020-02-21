@@ -51,7 +51,6 @@ export function getAppointmentsForDay(state, day) {
   if (filteredDaysName.length === 0) {
     return []
   }
-
   let arrayAppointment = filteredDaysName[0].appointments;
   for (let element of arrayAppointment) {
     selectedArray.push(state.appointments[element])
@@ -64,9 +63,30 @@ export function getInterview(state, interview) {
   if(!interview) {
     return null
   }
-
   return {
     ...interview, interviewer: state.interviewers[interview.interviewer]
   }
- 
+}
+
+export function getInterviewersForDay(state, day) {
+
+  let selectedArray = []
+
+  const filteredDaysName = state.days.filter(key => key.name === day)
+
+
+  if (filteredDaysName.length === 0) {
+    return []
+  }
+
+  let arrayAppointment = filteredDaysName[0].appointments;
+  console.log(arrayAppointment)
+  for (let element of arrayAppointment) {
+    selectedArray.push(state.interviewers[element])
+  }
+  // console.log(selectedArray)
+  return (selectedArray);
+
+
+
 }
