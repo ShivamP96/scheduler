@@ -18,7 +18,8 @@ const CREATE = "CREATE";
 const SAVING = "SAVING";
 const ERROR = "ERROR";
 const DELETING = "DELETING";
-const CONFIRM = "CONFIRM"
+const CONFIRM = "CONFIRM";
+const EDIT = "EDIT"; 
 
 const {mode, transition, back} = useVisualMode (
 
@@ -59,29 +60,44 @@ function appointmentDelete() {
       
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
-      {mode === CREATE && <Form interviewers={props.interviewers} onCancel={() => back()} onSave={save} />}
+      {mode === CREATE && 
+      (<Form 
+      interviewers={props.interviewers} 
+      onCancel={() => back()} 
+      onSave={save} 
+      />
+      )}
 
       {mode === SHOW && (
         <Show
           student={props.interview.student}
           interviewer={props.interview.interviewer.name}
           onDelete={() => transition(CONFIRM)}
+          onEdit={() => transition(EDIT)}
         />
       )}
       {mode === SAVING && (
         <Status message="Saving......"/>
       )}
       {mode === DELETING && (
-        < Status message="Deleting...."/>
+        <Status message="Deleting...."/>
       )}
       {mode === CONFIRM && (
         <Confirm 
         message={"Warning, this action is permanent - click cancel to go back"}
         onConfirm={appointmentDelete}
         onCancel={() => back()} />
-      )
-
-      }
+      )}
+      {mode === EDIT && (
+        <Form 
+        interviewers={props.interviewers}
+        onCancel={() => back()}
+        onSave={save}
+        student={props.interview.student}
+        interviewer={props.interview.name}
+        />
+      )}
+      
     
 
     </article>
