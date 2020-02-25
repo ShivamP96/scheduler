@@ -15,12 +15,12 @@ export default function Application(props) {
     appointments: {},
     interviewers: {}
   });
-
   const setDay = day => setState(state => ({...state, day}))
+
+  const interviewers = getInterviewersForDay(state, state.day);
   
   const lists = getAppointmentsForDay(state, state.day).map(appointment => {
     const interview = getInterview(state, appointment.interview);
-    const interviewers = getInterviewersForDay(state, state.day);
 
     return (
       <Appointment 
