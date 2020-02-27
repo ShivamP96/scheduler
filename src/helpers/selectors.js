@@ -69,6 +69,7 @@ export function getInterview(state, interview) {
 }
 
 export function getInterviewersForDay(state, day) {
+  // console.log("state for get interview: ", state)
 
   let selectedArray = []
 
@@ -79,12 +80,16 @@ export function getInterviewersForDay(state, day) {
     return []
   }
 
-  let arrayAppointment = filteredDaysName[0].appointments;
-  console.log(arrayAppointment)
-  for (let element of arrayAppointment) {
-    selectedArray.push(state.interviewers[element])
+  let arrayAppointment = filteredDaysName[0].interviewers;
+  // console.log(arrayAppointment)
+  for (let appointmentID of arrayAppointment) {
+    // if (state.appointments[appointmentID].interview) {
+    // let interviewerID = state.appointments[appointmentID].interview.interviewer
+    selectedArray.push(state.interviewers[appointmentID])
+    
+    
   }
-  // console.log(selectedArray)
+  // console.log("select3ed array: ",selectedArray)
   return (selectedArray);
 
 

@@ -13,7 +13,7 @@ import {useVisualMode} from "hooks/useVisualMode"
 
 
 export default function Appointment(props) {
-console.log("Props: ",props)
+// console.log("Props: ",props)
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
@@ -56,7 +56,7 @@ function appointmentDelete() {
 
   return (
 
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
