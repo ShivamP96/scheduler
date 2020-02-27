@@ -44,7 +44,7 @@ function save(name, interviewer) {
 }
 
 function appointmentDelete() {
-  console.log(props)
+  // console.log(props)
   transition(DELETING)
   props
   .cancelInterview(props.id)
