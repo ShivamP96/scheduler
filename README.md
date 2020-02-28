@@ -29,3 +29,14 @@ THe react scheduler has lots of testing and almost 100% coverage in most files, 
 
 ## Pictures
 
+### Base
+!["Scheduler-Base Image"](https://github.com/DrPaddle/scheduler/blob/master/docs/Scheduler-Base.png?raw=true)
+
+### Adding
+!["Scheduler-Adding Image"](https://github.com/DrPaddle/scheduler/blob/master/docs/scheduler-adding.png?raw=true)
+
+### Saving
+!["Scheduler-Adding Image"](https://github.com/DrPaddle/scheduler/blob/master/docs/scheduler-saving.png?raw=true)
+
+### Warning
+!["Scheduler-Warning Image"](https://github.com/DrPaddle/scheduler/blob/master/docs/scheduler-warning.png?raw=true)
