@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// the usevisualmode function is a funciton that usese the state and is able to store the state as a stack of transitions
 export function useVisualMode (initial) {
   
   const [mode, setMode] = useState(initial);

@@ -2,7 +2,10 @@ import React from 'react'
 import "components/DayListItem.scss"
 const classNames = require('classnames');
 
+
+// the actual daylistitem that takes data aka props from the daylist file
 export default function DayListItem(props) {
+
 
   const dayClass = classNames("day-list__item", {
     "day-list__item--selected": props.selected,

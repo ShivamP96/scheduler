@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useReducer} from "react";
 import axios from "axios";
 
+
+// all of the reducer aka usereducer is here, we used more complex state management
 import reducer, {
   SET_DAY,
   SET_APPLICATION_DATA,

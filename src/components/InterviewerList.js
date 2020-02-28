@@ -3,6 +3,7 @@ import InterviewerListItem from "components/InterviewerListItem"
 import "components/InterviewerList.scss"
 import PropTypes from 'prop-types'
 
+// the interviewerlist is the component that holds all the interviewers
 export default function InterviewerList (props) {
   
   InterviewerList.propTypes = {

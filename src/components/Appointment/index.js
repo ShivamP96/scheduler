@@ -11,9 +11,8 @@ import Error from "components/Appointment/Error"
 
 import {useVisualMode} from "hooks/useVisualMode"
 
-
+// the Appointment component that handles all the functionality of making an appoinment
 export default function Appointment(props) {
-// console.log("Props: ",props)
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
@@ -25,6 +24,7 @@ const EDIT = "EDIT";
 const ERROR_SAVE = "ERROR_SAVE";
 const ERROR_DELETE = "ERROR_DELETE";
 
+// calling our function that makes our state changes
 const {mode, transition, back} = useVisualMode (
 
   props.interview ? SHOW : EMPTY, 
@@ -44,7 +44,6 @@ function save(name, interviewer) {
 }
 
 function appointmentDelete() {
-  // console.log(props)
   transition(DELETING)
   props
   .cancelInterview(props.id)
@@ -53,6 +52,7 @@ function appointmentDelete() {
 
 }
 
+  // where we send in our props to the smaller components and render all the information
 
   return (
 

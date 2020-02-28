@@ -3,6 +3,7 @@ import "components/InterviewerListItem.scss"
 
 const classNames = require('classnames');
 
+// the actual interviwer list item that holds the interviewers available
 export default function InterviewerListItem(props) {
 
    const interviewerClass = classNames("interviewers__item", {

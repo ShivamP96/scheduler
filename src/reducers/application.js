@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useReducer} from "react";
 
 
+// the useapplicationdata and has the useReducer and we include the reducer itself here to differentiate it here
 export const SET_DAY = "SET_DAY";
 export const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
 export const SET_INTERVIEW = "SET_INTERVIEW";

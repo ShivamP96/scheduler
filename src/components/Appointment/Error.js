@@ -1,5 +1,6 @@
 import React from 'react'
 
+// our error component that shows up when there is an error
 export default function Error (props) {
   return (
     <main className="appointment__card appointment__card--error">

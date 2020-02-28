@@ -1,3 +1,5 @@
+
+// all of our stories for the storybook tests of indidviail componponents
 import React, {Fragment} from "react";
 
 import { storiesOf } from "@storybook/react";

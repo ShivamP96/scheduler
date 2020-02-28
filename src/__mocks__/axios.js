@@ -1,3 +1,4 @@
+// Mock fixture, this file will mock the axios library, we rely on the framework to redirect here when using our jests tests
 const fixtures = {
   days: [
     {
@@ -55,7 +56,7 @@ const fixtures = {
 
 
 export default {
-  // defaults: {baseURL: "" },
+  // our three mocked functions Get, Put, and delete
   get: jest.fn(url => {
     if(url === "/api/days") {
       return Promise.resolve({

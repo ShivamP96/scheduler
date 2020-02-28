@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import InterviewerList from 'components/InterviewerList'
 import Button from "components/Button"
 
+// the form component, that shows up when you need to enter data
 export default function Form (props) {
   const [name, setName] = useState(props.name || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
@@ -39,9 +40,6 @@ export default function Form (props) {
         name="name"
         type="text"
         placeholder="Enter Student Name"
-        /*
-          This must be a controlled component
-        */
        data-testid="student-name-input"
       />
   <section className="appointment_validation"> {error} </section>

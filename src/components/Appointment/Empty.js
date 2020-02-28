@@ -1,5 +1,6 @@
 import React from 'react'
 
+// the empty component, shows an add button
 export default function Empty (props) {
   return (
     <main className="appointment__add">
