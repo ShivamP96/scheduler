@@ -52,7 +52,7 @@ export default function useApplicationData(props) {
     }
 
     return ( 
-      axios.put(`http://localhost:8001/api/appointments/${id}`, appointment)
+      axios.put(`https://newinterviewscheduler.herokuapp.com/api/appointments/${id}`, appointment)
       .then(() => {
         dispatch({type: SET_INTERVIEW, appointment, id})
       })
@@ -69,7 +69,7 @@ function cancelInterview(id) {
    
 
   return ( 
-    axios.delete(`http://localhost:8001/api/appointments/${id}`, appointment)
+    axios.delete(`https://newinterviewscheduler.herokuapp.com/api/appointments/${id}`, appointment)
     .then(() => {
       dispatch({type: SET_INTERVIEW, appointment, id})
     })
