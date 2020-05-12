@@ -18,21 +18,21 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
-deploy:
-  machine:
-    enabled: true
+  deploy:
+    machine:
+      enabled: true
 
-  working_directory: ~/client
+    working_directory: ~/client
 
-  steps:
-    - add_ssh_keys:
-        fingerprints:
-          - "6b:e9:94:26:a8:87:bc:ff:f9:2a:d8:ce:a1:b3:88:04"
-    - checkout
-    - run:
-        name: Push circleci-project to Production
-        command: |
-          git push https://github.com/ShivamP96/scheduler.git circleci-project-setup:production
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "6b:e9:94:26:a8:87:bc:ff:f9:2a:d8:ce:a1:b3:88:04"
+      - checkout
+      - run:
+          name: Push circleci-project to Production
+          command: |
+            git push https://github.com/ShivamP96/scheduler.git circleci-project-setup:production
 
 workflows:
   version: 2
